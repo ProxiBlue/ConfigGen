@@ -1,0 +1,41 @@
+<config>
+    <menu>
+        <system>
+            <children>
+                <tools>
+                    <children>
+                        <configgen translate="title">
+                            <title>ProxiBlue Config Generator</title>
+                            <action>adminhtml/config</action>
+                            <sort_order>9999</sort_order>
+                        </configgen>
+                    </children>
+                </tools>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <tools>
+                                <configgen translate="title">
+                                    <title>ProxiBlue Config Generator</title>
+                                </configgen>
+                            </tools>
+                            <config>
+                                <children>
+                                    <configgen translate="title">
+                                        <title>ProxiBlue Config Generator</title>
+                                    </configgen>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

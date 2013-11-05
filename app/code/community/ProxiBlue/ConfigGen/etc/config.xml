@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ProxiBlue_ConfigGen>
+            <version>0.0.1</version>
+            <depends>
+                <Mage_Core />
+            </depends>
+        </ProxiBlue_ConfigGen>
+    </modules>
+    <global>
+        <helpers>
+            <configgen>
+                <class>ProxiBlue_ConfigGen_Helper</class>
+            </configgen>
+        </helpers>
+        <blocks>
+            <configgen>
+                <class>ProxiBlue_ConfigGen_Block</class>
+            </configgen>
+        </blocks>
+        <models>
+            <configgen>
+                <class>ProxiBlue_ConfigGen_Model</class>
+                
+            </configgen>
+        </models>
+        <resources>
+            <configgen_setup>
+                <setup>
+                    <module>ProxiBlue_ConfigGen</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </configgen_setup>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ProxiBlue_ConfigGen after="Mage_Adminhtml">ProxiBlue_ConfigGen</ProxiBlue_ConfigGen>
+                    </modules>
+                </args>   
+            </adminhtml>
+        </routers>
+    </admin>
+</config> 
