@@ -1,0 +1,9 @@
+<layout version="0.1.0">
+    <adminhtml_catalog_category_edit>
+        <reference name="category.edit">
+            <block type="configgen/adminhtml_catalog_category_export_buttons" name="configgen.export.buttons">
+                <action method="addButtons"></action>
+            </block>
+        </reference>
+    </adminhtml_catalog_category_edit>
+</layout>
