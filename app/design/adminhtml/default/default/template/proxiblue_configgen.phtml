@@ -15,7 +15,7 @@ $installer->startSetup();
 
 $config = new Mage_Core_Model_Config();
 
-$configItems = json_decode('<?php echo json_encode($this->getConfigItems());?>');
+$configItems = json_decode('<?php echo json_encode($this->getConfigItems(), JSON_HEX_APOS);?>');
 
 foreach ($configItems as $configItem) {
       $config->saveConfig($configItem->path, $configItem->value, $configItem->scope, $configItem->scope_id);
